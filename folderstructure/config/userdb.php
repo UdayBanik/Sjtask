@@ -8,8 +8,13 @@ function die_r($value){
 
 }
 
-require_once 'database.php';
+ //require_once 'Database.php';
 
+$db = new Database();
+
+$getRow = $db->getRow("SELECT *FROM users WHERE id = ?", ["3"]);
+
+die_r($getRow);
 
 
 ?>
